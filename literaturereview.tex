@@ -1,0 +1,169 @@
+\documentclass[]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{0}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\date{}
+
+\begin{document}
+
+\begin{longtable}[]{@{}lllll@{}}
+\toprule
+Reference & Research Purpose & Research Methods & Results &
+Challenges/Research Gaps\tabularnewline
+\midrule
+\endhead
+1 & Multilingual Hate Speech Detection & BERT & 83\% & Wrong
+classification due to annotation's dilemma (AD), Wrong classification
+due to confounding factors (CF), Wrong classification due to hidden
+context (HC)\tabularnewline
+2 & Bengali Hate Speech Detection & BERT & 97\% & Limited
+dataset\tabularnewline
+3 & Multilingual Hate Speech Detection & BERT & 89\% in English,
+
+87\% in malay. & Limited range of hyperparameters of
+
+the BERT models\tabularnewline
+4 & Multi-label hate speech detection & DistilBERT & 80.36\% & Shortage
+of collected data\tabularnewline
+5 & Cross-Lingual Few-Shot Hate Speech and Offensive Language Detection
+& Proto-MAML & 63.1\% & Shortage of collected data\tabularnewline
+6 & Hate Speech detection in the Bengali language:
+
+A dataset and its baseline evaluation & SVM & 87.5\% & The lack of
+sufficient data.\tabularnewline
+7 & Hate speech detection: Challenges and
+
+solutions & BERT,Multi-view SVM & 82.01\% & Need for more research on
+technical and practical matters.\tabularnewline
+8 & hate speech detection on social
+
+media using neural network & Recurrent neural network (RNN),CNN & 77\% &
+The lack of sufficient data.Further,need more datasets.\tabularnewline
+9 & Hate Speech and Offensive Language Detection in Bengali &
+m-BERT,XLM-Roberta,IndicBERT,muRIL,ELFI & 83\% & only analyzed publicly
+available data crawled
+
+via Twitter API.\tabularnewline
+10 & SOCIAL MEDIA
+
+COMMENTS FOR HATE SPEECH DETECTION IN BANGLA & BERT & 86.78\% & Found
+that emoji and punctuation do not affect HS detection\tabularnewline
+11 & Multilingual Racial Hate Speech Detection Using Transfer Learning &
+BERT and HateXplain & 88\%
+
+F1-score 86\% & Due to the limitation of time they were unable to
+research further.\tabularnewline
+12 & Automated Sentiment and Hate Speech Analysis of Facebook
+
+Data by Employing Multilingual Transformer Models. & XLM-T and NLP &
+F1-score
+
+Hateful
+
+71\%
+
+Non-hateful 83\% & Hateful Speech detection Precision is only
+55\%\tabularnewline
+13 & Large Annotated Dataset for Multi-Domain
+
+and Multilingual Hate Speech Identification. & BERT-Zero Shot & 93\% &
+Cannot detect leetspeak\tabularnewline
+14 & Combating Hate: How Multilingual
+
+Transformers Can Help Detect Topical Hate Speech. & LASER + SVM
+
+Baseline,
+
+mBERT and XLM-RoBERTA & Lowest 68.2\% and highest 85\% & Smaller
+datasets with class imbalance produced a weak fit.\tabularnewline
+15 & LMU at HaSpeeDe3: Multi-Dataset Training for Cross-Domain Hate
+Speech Detection. & AlBERTo, UmBERTo, mBERT and XML-R & Around 64\% &
+The accuracy is not that great. More data required.\tabularnewline
+16 & Hate Speech Detection in Italian Social Media Text & XML-Base,
+XLM-Large,
+
+mBERT, ITA-Base-XXL & 88.63\% & Limited evaluation of hate speech
+detection models on Italian language subset.\tabularnewline
+17 & Multi-Task Learning Approach to Hate Speech
+
+Detection & BERT,BETO & 86.58\%. & Limited focus on improving dataset
+quality for enhanced model learning.\tabularnewline
+18 & BERT-Mini Model for Hate-Speech Detection & BERT & 98.6\% & Does
+not thoroughly investigate how to optimize the BERT model for better
+performance.\tabularnewline
+19 & Emotionally Informed Hate Speech Detection & ELMo,
+
+CNN\textbf{FastText},
+
+BERT & 91.3\% & The research does not fully consider how the meaning of
+words and context affects accurately identifying hate
+speech.\tabularnewline
+20 & Hate Speech Detection Using
+
+Natural Language Processing Techniques & CNN & 91\% & Limited
+dataset\tabularnewline
+21 & Political and
+
+Religious Hate Speech Detection & BERT & 91\% & Out-of-domain setting
+does not work properly.\tabularnewline
+22 & Hate
+
+Speech & BERT,G-BERT & 95.56\% & Multiple language sentences are
+included in the Dataset. Some languages have less data .\tabularnewline
+23 & Bengali Hate Speech Detection & BERT & 80\% & Shortage of collected
+data\tabularnewline
+24 & Contextual Information
+
+in Hate Speech Detection & BERT & 61.3\% & we can observe that the
+dataset has complex,limited dataset, long contexts.\tabularnewline
+25 & Bangla hate speech & G-BERT & 95.56\% & Banglish sentence is not
+included\tabularnewline
+\bottomrule
+\end{longtable}
+
+\end{document}
